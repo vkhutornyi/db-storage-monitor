@@ -1,0 +1,14 @@
+{
+    "CRONUS USA, Inc.": {
+        "business_profile": "Distribution and logistics of industrial equipment.",
+        "monthly_shipment_volume": "Approximately 4,500 tons per month.",
+        "planned_customer_growth": "Expected 15% increase in active customer base over the next 12 months due to regional expansion.",
+        "additional_context": "Main database heavy tables are Sales Lines and Item Ledger Entries."
+    },
+    "System / Shared": {
+        "business_profile": "System tables, tenant media, application metadata, and shared cross-company resources.",
+        "monthly_shipment_volume": "N/A",
+        "planned_customer_growth": "Stable, should only grow linearly with system updates or framework logging.",
+        "additional_context": "Includes tracking logs, session parameters, and global system configurations."
+    }
+}
