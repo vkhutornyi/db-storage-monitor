@@ -33,6 +33,15 @@ class NewFileHandler(FileSystemEventHandler):
                     
                     if result.returncode == 0:
                         print(f"✅ [AI-Kernel] Execution Result: {result.stdout.strip()}")
+                        
+                        # --- GIT DEPLOYMENT TO GITHUB PAGES FOR /docs ---
+                        print("🚀 [AI-Kernel] Pushing updated report to GitHub Pages...")
+                        subprocess.run(['git', 'add', 'docs/index.html'], cwd=self.base_dir)
+                        subprocess.run(['git', 'commit', '-m', f"Auto-update storage forecast: {filename}"], cwd=self.base_dir)
+                        subprocess.run(['git', 'push', 'origin', 'main'], cwd=self.base_dir)
+                        print("✨ [AI-Kernel] Deployment complete!")
+                        # ------------------------------------------------
+                        
                     else:
                         print(f"❌ [AI-Kernel] Skill Error Execution Failure:\n{result.stderr}")
                 except Exception as e:

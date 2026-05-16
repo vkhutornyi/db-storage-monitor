@@ -167,5 +167,5 @@ def run_analytics_and_forecast(input_dir, output_html, years_to_predict=3):
     return "SUCCESS"
 
 if __name__ == "__main__":
-    res = run_analytics_and_forecast('../input_excel', '../report/index.html')
+    res = run_analytics_and_forecast('../input_excel', '../docs/index.html')
     print(res)
